@@ -19,15 +19,17 @@
 <script>
 // @ is an alias to /src
 import HelloWorld from '@/components/HelloWorld.vue'
+import { globalMixin } from '@/mixins/myMixin.js'
 
 export default {
   name: 'Home',
+  mixins: [globalMixin],
   components: {
     HelloWorld
   },
   data () {
     return {
-      title: 'This is a good title for Vue.js',
+      // title: 'This is a good title for Vue.js',
       brandNewTitle: '',
       formData: { name: 'Mohammed', address: '' },
       firstName: '',
@@ -35,9 +37,10 @@ export default {
     }
   },
   methods: {
-    changeTitle (newTitle) {
+    /* changeTitle (newTitle) {
+      console.log('I am from Home')
       this.title = newTitle
-    }
+    } */
   },
   watch: {
     title: function (val, oldVal) {
