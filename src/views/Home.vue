@@ -27,11 +27,35 @@ export default {
   components: {
     HelloWorld
   },
+  beforeCreate: function () {
+    console.log('I am beforCreate')
+  },
+  created: function () {
+    console.log('I am created')
+  },
+  beforeMount: function () {
+    console.log('I am beforeMount')
+  },
+  mounted: function () {
+    console.log('I am mounted')
+  },
+  beforeUpdate: function () {
+    console.log('I am beforeUpdate')
+  },
+  updated: function () {
+    console.log('I am updated')
+  },
+  beforeDestroy: function () {
+    console.log('I am beforeDestroy')
+  },
+  destroyed: function () {
+    console.log('I am destroyed')
+  },
   data () {
     return {
       // title: 'This is a good title for Vue.js',
       brandNewTitle: '',
-      formData: { name: 'Mohammed', address: '' },
+      formData: { name: 'Mohammed Zayan', address: '' },
       firstName: '',
       lastName: ''
     }
