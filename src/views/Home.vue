@@ -34,6 +34,9 @@ export default {
     console.log('I am created')
   },
   beforeMount: function () {
+    this.axios.get(this.api).then((response) => {
+      console.log(response.data)
+    })
     console.log('I am beforeMount')
   },
   mounted: function () {
@@ -55,9 +58,10 @@ export default {
     return {
       // title: 'This is a good title for Vue.js',
       brandNewTitle: '',
-      formData: { name: 'Mohammed Zayan', address: '' },
       firstName: '',
-      lastName: ''
+      lastName: '',
+      formData: { name: 'Mohammed Zayan', address: '' },
+      api: 'http://leer-api.local/api/educational_subjects'
     }
   },
   methods: {
